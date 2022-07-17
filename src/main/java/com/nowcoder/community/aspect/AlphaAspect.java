@@ -38,13 +38,12 @@ public class AlphaAspect {
     }
 
     @Around("pointcut()")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
+    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("around before");
         Object obj = joinPoint.proceed();
         System.out.println("around after");
         return obj;
     }
-
 
 
 }
